@@ -13,7 +13,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'https://akabab.github.io/superhe
 
 
 
-$tabId = [20,30,38,63,70,149,213,289,303,389];
+$tabId = [30,38,63,70,149,160,213,289,303,389];
 //select 10 id random
 
 for ($i=0; $i <=9 ; $i++) { 
@@ -32,7 +32,7 @@ echo "<pre>";
 
 echo '<img src='.$b->{'images'}->{'sm'}.'>';
 echo '<form action="request.php" method="post">';
-echo 	'<input type="submit" value="Valider" name='. $i .'>'; 
+echo 	'<input type="submit" value="Choisir" name='. $i .'>'; 
 echo '</form>';
 
 
@@ -40,10 +40,12 @@ echo '</form>';
 }
 
 function id(){
-if(isset($_POST[$i])){
+for ($i=0; $i <=9 ; $i++) { 
 
-	for ($y=0; $y <=9 ; $y++) {
-	return $tabId[$y];
+	if(isset($_POST[$i])){
+
+		return $i;
+	}
+
 }
-
-}}
+}
