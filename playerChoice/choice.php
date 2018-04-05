@@ -2,10 +2,17 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style_formulaire.css">
 	<title>Mon formulaire HTML wallah</title>
 </head>
 <body>
+
+	<?php
+	require ('../instanciation/instanciation.php');
+
+
+	while ($joueur1->getLife()>0 && $joueur2->getLife()>0)
+
+		{ ?>
 
 	<form method="post">
 
@@ -26,13 +33,7 @@
 
 	</form>
 
-	<?php
-
-	if($_POST)
-	{
-		var_dump($_POST);
-	} 
-	?>
+	<?php } ?>
 
 </body>
 </html>
