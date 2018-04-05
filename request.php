@@ -1,6 +1,8 @@
 <?php
 
-require 'vendor/autoload.php';
+require 'vendor/autoload.php' ;
+
+require 'selectorCharacter.php' ;
 
 use GuzzleHttp\Client;
 
@@ -9,7 +11,7 @@ use GuzzleHttp\Client;
 $client = new GuzzleHttp\Client(['base_uri' => 'https://akabab.github.io/superhero-api/api/']);
 
 // Choix id character
-$player1 = 1 ;
+$player1 = id() ;
 
 // Send a request to id/'choix id character'.json
 $response = $client->request('GET', 'id/' . "$player1" .'.json');
