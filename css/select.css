@@ -1,0 +1,50 @@
+@font-face { 
+	font-family: "mexcellent";
+    src: url('../fonts/mexcellent/mexcellent rg.ttf');
+}
+
+.selectBody 
+{
+	background-image: url(../images/mario.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+
+.playerSelection
+{
+	margin-bottom: 30px;
+	font-style: italic; 
+	font-size: 5em;
+	font-family: mexcellent;
+
+}
+.name
+{
+	border: 1px solid black;
+	color: #FD465A;
+	font-size: 2em; 	
+
+}
+
+form
+{	
+	justify-content: center;
+
+}
+
+.selectCharacter
+{
+	margin-top: 5px; 
+	margin-bottom: 15px;
+	width: 200px; 
+	background-color: #FD465A;
+	transition-duration: 0.5s; 
+}
+
+.selectCharacter:hover
+{
+	background-color: white;  
+
+}
