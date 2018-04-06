@@ -1,5 +1,13 @@
-/vendor/
+/vendor
+
+
+=======
 composer.json
 composer.lock
+<<<<<<< HEAD
+request/.DS_Store
+
+=======
 .DS_Store
 request/.DS_Store
+>>>>>>> 551c9d12e7c8ff7afcb99389aed5bf9a89253ae6

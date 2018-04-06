@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
   if (isset($_SESSION['player1']['id'])){
     fillSessionPlayer('player2', $information);
     $_POST= array();
-    header('Location: playerChoice/choice.php');
+    header('Location: Gameplay.php');
   }else{
       fillSessionPlayer('player1', $information);
   }
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 
-  <div class="container-fluid"> 
+  <div class="container-fluid">
     <div class="row d-flex justify-content-around">
 
 <?php
@@ -49,7 +49,7 @@ foreach ($availableFighters as $value) {
             <div>
             <img class="card-img-top" src="<?= $information['images']['md'] ?>" alt="Card image" style="width:100%">
 
-          
+
               <form class="form-inline" method="post">
                   <button type="submit" class="btn selectCharacter" name="submit" value="<?= $value ?>">Select</button>
               </form>
@@ -63,11 +63,3 @@ foreach ($availableFighters as $value) {
     </div>
   </div>
 </body>
-
-
-
-
-
-
-
-

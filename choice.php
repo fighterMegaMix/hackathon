@@ -10,8 +10,8 @@
 
 	<?php
 
-	require ('../instanciation/instanciation.php');
-	require ('../game/game.php');
+	require 'Instanciation.php';
+	require 'game.php';
 
 
 
@@ -21,24 +21,24 @@
 
 	<form method="post">
 
-	
-		<input type="submit" value="attack" name="joueur1Attack">
-		
 
-		<input type="submit" value="potion" name="joueur1Potion"> 
+		<input type="submit" value="attack" name="joueur1Attack">
+
+
+		<input type="submit" value="potion" name="joueur1Potion">
 
 
 
 	</form>
 
 	<form method="post">
-		<input type="submit" value="attack" name="joueur2Attack"> 
+		<input type="submit" value="attack" name="joueur2Attack">
 
 		<input type="submit" value="potion" name="joueur2Potion">
 
 	</form>
 
-	<?php } 
+	<?php }
 
 	$dommage = Game($_POST, $joueur1, $joueur2);
 
@@ -91,6 +91,3 @@
 
 </body>
 </html>
-
-
-

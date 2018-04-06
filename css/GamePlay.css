@@ -1,0 +1,103 @@
+
+
+body{
+  margin: 10px;
+  background-image: url('https://pre00.deviantart.net/94c2/th/pre/f/2011/262/1/4/kombat_tomb___empty_version_by_molim-d4ablz9.jpg');
+}
+
+h1{
+  text-align: center;
+  color: white;
+}
+
+
+.flip3Dplayer1{
+    width: 320px;
+    height: 480px;
+    margin: 10px;
+    float: left;
+
+}
+
+.flip3Dplayer1 > .font{
+  position: absolute;
+  transform: perspective( 600px ) rotateY( 0deg );
+  background: blue; width: 320px; height: 480px; border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+
+}
+
+
+.flip3Dplayer1 > .back{
+  position: absolute;
+  transform: perspective( 600px ) rotateY( 180deg );
+  background: url('https://i.pinimg.com/564x/91/d5/49/91d5497f6a839757c3d2a9eb98c938dd.jpg'); width: 320px; height: 480px; border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+
+}
+
+.flip3Dplayer1:hover > .font{
+  transform: perspective(600px ) rotateY(-180deg);
+
+}
+
+.flip3Dplayer1:hover > .back{
+  transform: perspective(600px) rotateY( 0deg);
+
+}
+
+
+
+/* joueurs 2 */
+
+
+.flip3Dplayer2{
+    width: 320px;
+    height: 480px;
+    margin: 10px;
+    float: right;
+
+}
+
+.flip3Dplayer2 > .font{
+  position: absolute;
+  transform: perspective( 600px ) rotateY( 0deg );
+  background: blue; width: 320px; height: 480px; border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+
+}
+
+
+.flip3Dplayer2 > .back{
+  position: absolute;
+  transform: perspective( 600px ) rotateY( 180deg );
+  background: url('https://i.pinimg.com/564x/91/d5/49/91d5497f6a839757c3d2a9eb98c938dd.jpg'); width: 320px; height: 480px; border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+
+}
+
+.flip3Dplayer2:hover > .font{
+  transform: perspective(600px ) rotateY(-180deg);
+
+}
+
+.flip3Dplayer2:hover > .back{
+  transform: perspective(600px ) rotateY( 0deg);
+
+}
+p{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+form{
+
+width: 10%;
+display: block;
+margin-bottom: 50px;
+
+}
