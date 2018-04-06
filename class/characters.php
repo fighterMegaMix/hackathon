@@ -4,39 +4,46 @@
 
 class Characters{
 
+    const MAX_LIFE = 100;
+  const MAX_ENERGY = 100;
+
   private $Name;
   private $intelligence;
   private $strength;
   private $durability;
   private $power;
   private $combat;
-  private $Life = 100;
+  private $Life;
 
 
-function __construct($Name, $intelligence,$strength,$speed, $durability,$power,$combat){
+function __construct(array $information){
 
-      $this->intelligence = $intelligence;
-      $this->strength = $strength;
-      $this->durability = $durability;
-      $this->power = $power;
-      $this->combat = $combat;
+      $this->Name = $information['name'];
+      $this->intelligence = $information['intelligence'];
+      $this->strength = $information['strength'];
+      $this->durability = $information['durability'];
+      $this->power = $information['power'];
+      $this->combat = $information['combat'];
+      $this->Life = $information['life'];
 
 }
 
 public function Attack(){
 
-      $Damage = ($this->strength*5)/100;
+      $Damage = (($this->strength)/100)*5;
       return $Damage;
 }
 
 public function Defense($Damage){
 
-  $this->Life = $this->Life - ($this->durability * $Damage)/100;
+  $this->Life = $this->Life - ((100-$this->durability) * $Damage)/100;
+  return $this->Life;
 
 }
 
 public function Potion(){
   $this->Life = $this->Life + ($this->intelligence * 5)/100;
+  return $this->Life;
 
 }
 
@@ -44,6 +51,18 @@ public function GetLife(){
   return $this->Life;
 
 }
+
+public function setLife($life)
+  {
+    if ($life > self::MAX_LIFE){
+       $this->Life = self::MAX_LIFE;
+    }elseif ($life <= 0){
+       $this->Life = 0;
+    }else{
+      $this->Life = $life;
+    }
+    return $this->Life;
+  }
 
 public function GetName(){
   return $this->Name;

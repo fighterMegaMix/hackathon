@@ -2,3 +2,4 @@
 composer.json
 composer.lock
 .DS_Store
+request/.DS_Store
