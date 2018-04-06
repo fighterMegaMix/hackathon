@@ -14,6 +14,7 @@ class Characters{
   private $power;
   private $combat;
   private $Life;
+  private $counter;
 
 
 function __construct(array $information){
@@ -25,6 +26,7 @@ function __construct(array $information){
       $this->power = $information['power'];
       $this->combat = $information['combat'];
       $this->Life = $information['life'];
+      $this->counter = $information['counter'];
 
 }
 
