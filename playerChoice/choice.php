@@ -38,6 +38,8 @@
 
 	$joueur1->Defense(Game($_POST, $joueur1, $joueur2));
 	var_dump($joueur1);
+	echo '<br>';
+	var_dump($joueur2);
 
 	?>
 
