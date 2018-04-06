@@ -13,13 +13,14 @@ class Characters{
   private $Life = 100;
 
 
-function __construct($Name, $intelligence,$strength,$speed, $durability,$power,$combat){
+function __construct(array $information){
 
-      $this->intelligence = $intelligence;
-      $this->strength = $strength;
-      $this->durability = $durability;
-      $this->power = $power;
-      $this->combat = $combat;
+      $this->Name = $information['name'];
+      $this->intelligence = $information['intelligence'];
+      $this->strength = $information['strength'];
+      $this->durability = $information['durability'];
+      $this->power = $information['power'];
+      $this->combat = $information['combat'];
 
 }
 
