@@ -1,10 +1,16 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/select.css">
+</head>
+
+
 <?php
 session_start();
 require_once 'getJsonInfo.php';
 require_once 'fillSessionPlayer.php';
 require 'vendor/autoload.php';
-$availableFighters = [37,38,63,70,149,160,213,289,303,389];
-var_dump($_POST);
+$availableFighters = [38,63,70,149,160,213,289,298,303,389 ];
+
 if (isset($_POST['submit'])) {
   $information = getJsonInfo($_POST['submit']);
   if (isset($_SESSION['player1']['id'])){
@@ -16,11 +22,11 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<body>
+<body class="selectBody">
 
   <div class="container-fluid">
     <div class="row d-flex justify-content-around">
-      <h1>Select your <?php if (isset($_SESSION['player1']['id']) && ($_SESSION['player1']['id'] != "")){
+      <h1 class="playerSelection">Select your <?php if (isset($_SESSION['player1']['id']) && ($_SESSION['player1']['id'] != "")){
         echo 'opponent';
       }else{
         echo 'fighter';
@@ -29,31 +35,24 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid"> 
     <div class="row d-flex justify-content-around">
 
 <?php
 foreach ($availableFighters as $value) {
     $information = getJsonInfo($value);
 ?>
-        <div class="card mt-2 mb-2" style="width:320px">
-          <img class="card-img-top" src="<?= $information['images']['md'] ?>" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title"><?= $information['name'] ?></h4>
+        <div>
+          <h4 class="name"><?= $information['name'] ?></h4>
+          <div>
+            <div>
+            <img class="card-img-top" src="<?= $information['images']['md'] ?>" alt="Card image" style="width:100%">
 
-            <p class="card-text">
-            <ul>
-                <li>Speed: <?= $information['powerstats']['speed'] ?></li>
-                <li>Special attack: <?= $information['powerstats']['power'] ?></li>
-                <li>Attack: <?= $information['powerstats']['strength'] ?></li>
-                <li>Defense: <?= $information['powerstats']['durability'] ?></li>
-                <li>Intelligence: <?= $information['powerstats']['intelligence'] ?></li>
-                <li>Combat: <?= $information['powerstats']['combat'] ?></li>
-              </ul>
-            </p>
-            <form class="form-inline" method="post">
-                <button type="submit" class="btn btn-primary" name="submit" value="<?= $value ?>">Select</button>
-            </form>
+          
+              <form class="form-inline" method="post">
+                  <button type="submit" class="btn selectCharacter" name="submit" value="<?= $value ?>">Select</button>
+              </form>
+            </div>
           </div>
         </div>
 <?php
@@ -63,3 +62,11 @@ foreach ($availableFighters as $value) {
     </div>
   </div>
 </body>
+
+
+
+
+
+
+
+
