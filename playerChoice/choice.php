@@ -8,9 +8,10 @@
 
 	<?php
 	require ('../instanciation/instanciation.php');
+	require ('../game/game.php');
 
 
-	while ($joueur1->getLife()>0 && $joueur2->getLife()>0)
+	if ($joueur1->getLife()>0 && $joueur2->getLife()>0)
 
 		{ ?>
 
@@ -33,7 +34,12 @@
 
 	</form>
 
-	<?php } ?>
+	<?php } 
+
+	$joueur1->Defense(Game($_POST, $joueur1, $joueur2));
+	var_dump($joueur1);
+
+	?>
 
 </body>
 </html>
