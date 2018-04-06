@@ -1,5 +1,17 @@
 {
+<<<<<<< HEAD
     "require": {
         "guzzle/guzzle": "^3.9"
+=======
+    "name": "wcs/gauth",
+    "authors": [
+        {
+            "name": "Gauthier Torreilles",
+            "email": "gauthiertorreilles@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+>>>>>>> 68ed60cb5b071fdfbc5ef70a392c14ce9b19f159
     }
 }
