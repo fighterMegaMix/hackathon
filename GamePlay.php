@@ -1,5 +1,5 @@
 <!doctype html>
-
+<?php require 'choice.php'; ?>
 <html>
 	<head><title>FIGHT</title>
 
@@ -23,13 +23,14 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
 <div class="flip3Dplayer1">
 
   <div class="back">
-    <form method="post">
-      <input type="submit" name="ATTACKPLAYER2" value="ATTACKPLAYER2"/>
-        <input type="submit" name="POTION" value="POTION"/>
-    </form>
-      <p>Name: </p>
-      <p> Life: </p>
-      <p>intelligence: </p>
+		<form method="post">
+			<input type="submit" value="attack" name="joueur1Attack">
+			<input type="submit" value="potion" name="joueur1Potion">
+		</form>
+
+      <p>Name:<?php echo $_SESSION[$player1]['name']; ?> </p>
+      <p> Life:<?php $_SESSION[$player1]['life']; ?> </p>
+      <p>intelligence: <?php $_SESSION[$player1]['intelligence']; ?> </p>
     </div>
     <div class="front">
 
@@ -40,13 +41,13 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
 
 <div class="flip3Dplayer2">
   <div class="back">
-    <form method="post">
-      <input type="submit" name="ATTACKPLAYER1" value="ATTACKPLAYER1"/>
-        <input type="submit" name="POTION" value="POTION"/>
-    </form>
-    <p>Name: </p>
-    <p> Life: </p>
-    <p>intelligence: </p>
+		<form method="post">
+			<input type="submit" value="attack" name="joueur2Attack">
+			<input type="submit" value="potion" name="joueur2Potion">
+		</form>
+    <p>Name:<?php echo $_SESSION[$player2]['name']; ?> </p>
+    <p> Life:<?php $_SESSION[$player2]['life']; ?> </p>
+    <p>intelligence:<?php $_SESSION[$player2]['intelligence']; ?> </p>
   </div>
 
   <div class="front">
