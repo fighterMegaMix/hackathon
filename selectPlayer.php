@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
   $information = getJsonInfo($_POST['submit']);
   if (isset($_SESSION['player1']['id'])){
     fillSessionPlayer('player2', $information);
+    $_POST= array();
     header('Location: playerChoice/choice.php');
   }else{
       fillSessionPlayer('player1', $information);
