@@ -1,0 +1,8 @@
+<?php
+
+require ('../request/request.php');
+require ('../class/characters.php');
+
+$joueur1 = new Characters ($name1, $intelligence1, $strength1, $speed1, $durability1, $power1, $combat1);
+$joueur2 = new Characters ($name2, $intelligence2, $strength2, $speed2, $durability2, $power2, $combat2);
+
