@@ -16,11 +16,9 @@ $client = new GuzzleHttp\Client(['base_uri' => 'https://akabab.github.io/superhe
 $tabId = [30,38,63,70,149,160,213,289,303,389];
 //select 10 id random
 
-for ($i=0; $i <=9 ; $i++) { 
-	# code...
+foreach ($tabId as $key => $value) { 
 
-$id= $tabId[$i];
-$response = $client->request('GET', 'id/' . $id . '.json');
+$response = $client->request('GET', 'id/' . $value . '.json');
 $body = $response->getBody();
 
 $a = $body->getContents();
@@ -32,20 +30,15 @@ echo "<pre>";
 
 echo '<img src='.$b->{'images'}->{'sm'}.'>';
 echo '<form action="request.php" method="post">';
-echo 	'<input type="submit" value="Choisir" name='. $i .'>'; 
+echo 	'<input type="submit" value="' .$value. '" name="joueur1">'; 
 echo '</form>';
 
 
 
 }
 
-function id(){
-for ($i=0; $i <=9 ; $i++) { 
+var_dump($_POST);
 
-	if(isset($_POST[$i])){
 
-		return $i;
-	}
 
-}
-}
+
