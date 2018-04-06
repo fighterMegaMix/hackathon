@@ -1,0 +1,12 @@
+{
+    "name": "wcs/gauth",
+    "authors": [
+        {
+            "name": "Gauthier Torreilles",
+            "email": "gauthiertorreilles@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
