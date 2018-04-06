@@ -13,7 +13,7 @@ class Characters{
   private $Life = 100;
 
 
-function __construct($intelligence,$strength,$durability,$power,$combat){
+function __construct($Name, $intelligence,$strength,$speed, $durability,$power,$combat){
 
       $this->intelligence = $intelligence;
       $this->strength = $strength;
@@ -31,12 +31,12 @@ public function Attack(){
 
 public function Defense($Damage){
 
-  $this->Life = $Life-($this->durability * $Damage)/100;
+  $this->Life = $this->Life - ($this->durability * $Damage)/100;
 
 }
 
-public function Potion($intelligence){
-  $this->life = $Life + ($intelligence*5)/100;
+public function Potion(){
+  $this->Life = $this->Life + ($this->intelligence * 5)/100;
 
 }
 
